@@ -3,26 +3,19 @@
 /**
  * main - Entry point
  *
- * Description: print 0, 1, - 9
+ * Description: print numbers of base16 in lowercase
  *
- * Return: Always 0 (Success
+ * Return: 0 if no error, non zero if error.
  */
 
 int main(void)
 {
-	int digit = 0;
+	int i;
+	char hexvalues[] = "0123456789abcdef";
 
-	while (digit <= 9)
+	for (i = 0; i < 16; i++)
 	{
-		putchar(digit + 48);
-
-		if (digit != 9)
-		{
-			putchar(',');
-			putchar(' ');
-		}
-
-		++digit;
+		putchar(hexvalues[i]);
 	}
 	putchar('\n');
 
